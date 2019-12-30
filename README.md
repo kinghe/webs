@@ -13,12 +13,14 @@ virtualenv -p python3.* .env
 ```
 
 2. uwsgi
+```bash
+#ubuntu: 
+apt-get install python3.5-dev
+#centos: 
+yum install -y  python3-devel
 
-ubuntu: apt-get install python3.5-dev
-centos: yum install -y  python3-devel
 pip3 install uwsgi
 
-```bash
 uwsgi --ini uwsgi.ini             # 启动
 uwsgi --reload uwsgi.pid          # 重启
 uwsgi --stop uwsgi.pid            # 关闭
