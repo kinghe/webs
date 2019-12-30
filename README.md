@@ -12,7 +12,7 @@ pip install --upgrade virtualenv
 virtualenv -p python3.* .env
 ```
 
-2.uwsgi
+2. uwsgi
 
 ubuntu: apt-get install python3.5-dev
 centos: yum install -y  python3-devel
@@ -48,7 +48,7 @@ uwsgi.ini
   virtualenv = /home/*/webs/.env
 ```
 
-3.nginx conf
+3. nginx conf
 /etc/nginx/nginx.conf
 
 ```nginx
@@ -58,7 +58,7 @@ location / {
         }
 ```
 
-4.flask
+4. flask
 pip install flask
 /home/*/webs/webs.py
 
