@@ -3,20 +3,25 @@
 
 web site for vpn+centos7+nginx. for flask+uwsgi.
 
++ git命令。本地编辑文件，服务端更新。
++ nginx流程.包括服务端的安装，配置流程。
+
 ## make build
 
-1. virtualenv
+### virtualenv
 
 ```bash
 pip install --upgrade virtualenv
+cd /home/*/webs #your_workspace_dir 见uwsgi.ini的virtualenv部分
 virtualenv -p python3.* .env
 ```
 
-2. uwsgi
+### uwsgi
+
 ```bash
-#ubuntu: 
+#ubuntu:
 apt-get install python3.5-dev
-#centos: 
+#centos:
 yum install -y  python3-devel
 
 pip3 install uwsgi
@@ -50,7 +55,8 @@ uwsgi.ini
   virtualenv = /home/*/webs/.env
 ```
 
-3. nginx conf
+### nginx conf
+
 /etc/nginx/nginx.conf
 
 ```nginx
@@ -60,7 +66,8 @@ location / {
         }
 ```
 
-4. flask
+### flask
+
 pip install flask
 /home/*/webs/webs.py
 
@@ -75,5 +82,5 @@ def helloWorld():
     return "Hello World"
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8987, debug=True)
+    app.run(host='0.0.0.0', port=3031, debug=True)
 ```
